@@ -1,0 +1,177 @@
+
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Learn & Earn by Vanguard Enterprises. Inclusive learning, practical skills and opportunities.">
+  <title>Learn & Earn | By Vanguard Enterprises</title>
+  <style>
+    :root {
+      --green: #075449;
+      --gold: #b18a3b;
+      --ivory: #faf7ef;
+      --ink: #20352f;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: var(--ivory);
+      color: var(--ink);
+      line-height: 1.6;
+    }
+    header {
+      background: white;
+      padding: 18px 6%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+    .brand {
+      color: var(--green);
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .brand span { color: var(--gold); }
+    nav { display: flex; flex-wrap: wrap; gap: 14px; }
+    nav a {
+      color: var(--green);
+      text-decoration: none;
+      font-size: 14px;
+    }
+    nav a:hover, nav a:focus { text-decoration: underline; }
+    .hero {
+      background: linear-gradient(125deg,#075449,#10796b);
+      color: white;
+      padding: 75px 7%;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: clamp(36px,6vw,66px);
+      line-height: 1.15;
+      margin: 0 0 18px;
+    }
+    .hero p {
+      max-width: 650px;
+      margin: 0 auto 28px;
+      font-size: 19px;
+    }
+    .button {
+      display: inline-block;
+      padding: 13px 25px;
+      background: var(--gold);
+      color: #172b24;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: bold;
+    }
+    .sections {
+      max-width: 1150px;
+      margin: 55px auto;
+      padding: 0 6%;
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+      gap: 22px;
+    }
+    .tile {
+      background: white;
+      border: 1px solid #e6e1d6;
+      border-radius: 16px;
+      padding: 30px 22px;
+      box-shadow: 0 5px 20px #00000008;
+    }
+    .tile h2 { color: var(--green); font-size: 21px; }
+    .tile a { color: var(--green); font-weight: bold; }
+    .message {
+      text-align: center;
+      padding: 30px 6% 65px;
+    }
+    .message h2 { color: var(--green); }
+    footer {
+      background: var(--green);
+      color: white;
+      padding: 25px;
+      text-align: center;
+    }
+    .accessibility {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+    button {
+      padding: 8px 12px;
+      cursor: pointer;
+      border: 1px solid var(--green);
+      border-radius: 8px;
+      background: white;
+      color: var(--green);
+    }
+    body.large-text { font-size: 120%; }
+    body.high-contrast {
+      --ivory: #fff;
+      --green: #003c32;
+      --gold: #f2c54d;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">Learn <span>&amp;</span> Earn</div>
+    <nav aria-label="Main navigation">
+      <a href="#courses">Courses</a>
+      <a href="#jobs">Jobs &amp; Opportunities</a>
+      <a href="#dyslexia">Dyslexia Support</a>
+      <a href="#games">Games</a>
+      <a href="#pa">PA Connect</a>
+    </nav>
+    <div class="accessibility">
+      <button type="button" onclick="document.body.classList.toggle('large-text')" aria-label="Toggle larger text">A+</button>
+      <button type="button" onclick="document.body.classList.toggle('high-contrast')">Contrast</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Learn. Practise. Earn.</h1>
+      <p>Discover practical skills, build confidence and explore opportunities at your own pace.</p>
+      <a class="button" href="#courses">Explore Learning</a>
+    </section>
+
+    <div class="sections">
+      <section class="tile" id="courses">
+        <h2>Courses</h2>
+        <p>Learn useful skills for work, everyday life and personal development.</p>
+        <a href="#courses">Explore courses</a>
+      </section>
+      <section class="tile" id="jobs">
+        <h2>Jobs &amp; Opportunities</h2>
+        <p>Discover employment pathways and opportunities to develop your future.</p>
+        <a href="#jobs">Explore opportunities</a>
+      </section>
+      <section class="tile" id="dyslexia">
+        <h2>Dyslexia Support</h2>
+        <p>Explore accessible learning strategies, guidance and practical support.</p>
+        <a href="#dyslexia">Find support</a>
+      </section>
+      <section class="tile" id="pa">
+        <h2>PA Connect</h2>
+        <p>Discover the pathway to developing professional personal assistant skills.</p>
+        <a href="#pa">Learn more</a>
+      </section>
+    </div>
+
+    <section class="message" id="games">
+      <h2>Inclusive. Flexible. Real Support.</h2>
+      <p>Learning should fit around your life, not the other way around.</p>
+      <p>Interactive practice games and learning tools are coming soon.</p>
+    </section>
+  </main>
+
+  <footer>
+    Learn &amp; Earn | By Vanguard Enterprises
+  </footer>
+</body>
+</html>
