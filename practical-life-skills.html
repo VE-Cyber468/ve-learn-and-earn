@@ -6,132 +6,359 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Practical Life Skills | Learn & Earn</title>
 <style>
-:root{font-family:Arial,sans-serif;color:#102e52;background:#f5f3ed}
+:root{
+ --navy:#102e52;--blue:#397fb7;
+ --sky:#e8f3fa;--gold:#c5a16a;
+ --cream:#f5f3ed;--ink:#203448
+}
 *{box-sizing:border-box}
-body{margin:0;line-height:1.6}
-header{background:#102e52;color:white;padding:32px 20px}
-main{max-width:980px;margin:auto;padding:22px}
-h1,h2,h3{line-height:1.25}
-.card{background:white;border-radius:14px;padding:20px;margin:15px 0;box-shadow:0 2px 9px #102e5215}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
-button{background:#397fb7;color:white;border:0;border-radius:9px;padding:13px 16px;margin:5px 5px 5px 0;font-size:16px;cursor:pointer}
-button:focus-visible{outline:3px solid #c5a16a}
-button:disabled{opacity:.5}
-.tag{display:inline-block;background:#e4f1f8;border-radius:20px;padding:4px 12px}
-.note{background:#fff4db;padding:14px;border-radius:9px}
-#feedback{font-weight:bold}
-footer{background:#102e52;color:white;padding:25px;text-align:center}
+body{margin:0;font-family:Arial,sans-serif;
+ background:var(--cream);color:var(--ink);
+ line-height:1.6}
+header{background:linear-gradient(125deg,#102e52,#397fb7);
+ color:white;padding:32px 20px 45px}
+.wrap{max-width:1000px;margin:auto}
+h1{font-size:clamp(32px,6vw,54px);line-height:1.1}
+h2{color:var(--navy)}
+main{max-width:1000px;margin:auto;padding:22px}
+.card{background:white;border-radius:18px;
+ padding:22px;margin:20px 0;
+ box-shadow:0 5px 20px #102e5212}
+.grid{display:grid;grid-template-columns:
+ repeat(auto-fit,minmax(220px,1fr));gap:15px}
+button,.btn{background:var(--blue);color:white;
+ border:0;border-radius:10px;padding:13px 18px;
+ font-size:16px;cursor:pointer;margin:5px 5px 5px 0}
+button:hover{background:var(--navy)}
+button:focus-visible{outline:3px solid var(--gold)}
+button:disabled{opacity:.55}
+.tag{display:inline-block;background:var(--sky);
+ color:var(--navy);border-radius:30px;
+ padding:5px 13px;font-weight:bold;font-size:13px}
+.gold{border-top:5px solid var(--gold)}
+.small{font-size:14px;color:#53677a}
+.bill{background:#fff;border:2px solid #c7d9e7;
+ border-radius:15px;overflow:hidden}
+.billhead{background:var(--navy);color:white;
+ padding:18px}
+.billbody{padding:18px}
+.billrow{display:flex;justify-content:space-between;
+ gap:15px;padding:12px 0;border-bottom:1px solid #ddd}
+.billrow strong{white-space:nowrap}
+.highlight{background:#fff0c9;padding:8px;
+ border-radius:6px}
+.info{background:var(--sky);padding:15px;
+ border-radius:12px;margin:12px 0}
+.option{display:block;width:100%;text-align:left;
+ background:#eef5fa;color:var(--navy);
+ border:2px solid transparent}
+.option:hover{background:#dcebf5}
+.feedback{padding:15px;background:#fff0c9;
+ border-radius:10px;margin-top:15px}
+.progress{height:9px;background:#dce7ee;
+ border-radius:10px;overflow:hidden}
+.bar{height:100%;background:var(--blue);
+ width:0%;transition:width .3s}
+.hidden{display:none}
+footer{background:var(--navy);color:white;
+ padding:25px;text-align:center}
+a{color:inherit}
 </style>
 </head>
 <body>
 <header>
-<p>LEARN & EARN · By Vanguard Enterprises</p>
-<h1>Practical Life Skills</h1>
-<p>Start with the basics. Practise real-life situations. Grow your confidence.</p>
+<div class="wrap">
+<p>LEARN & EARN · BY VANGUARD ENTERPRISES</p>
+<span class="tag">PRACTICAL LIFE SKILLS</span>
+<h1>Learn skills for real life.</h1>
+<p>Discover. Watch. Explore. Practise.</p>
+<p>No experience needed. Start at your own pace.</p>
+</div>
 </header>
+
 <main>
-<section>
-<h2>Explore your interests</h2>
-<div class="grid" id="subjects"></div>
+<section class="card">
+<h2>Explore Practical Life Skills</h2>
+<div class="grid">
+<div><h3>💷 Money & Bills</h3>
+<p>Understand bills, banking, budgeting and contracts.</p></div>
+<div><h3>🍳 Cooking & Food</h3>
+<p>Learn cooking, shopping and food safety.</p></div>
+<div><h3>🛠️ Home & DIY</h3>
+<p>Explore tools, repairs and home maintenance.</p></div>
+<div><h3>🧵 Making & Mending</h3>
+<p>Discover sewing, repairs and creative skills.</p></div>
+<div><h3>💻 Digital Skills</h3>
+<p>Use technology, email and online services.</p></div>
+<div><h3>🌱 Hobbies & Interests</h3>
+<p>Explore photography, gardening, art and more.</p></div>
+</div>
+<p class="small">More subjects and courses are being developed.</p>
+</section>
+
+<section class="card gold">
+<span class="tag">LEVEL 1 · FREE</span>
+<h2>Money Skills: Understanding Your Electricity Bill</h2>
+<p>Electricity bills can contain unfamiliar words,
+charges and figures. In this lesson, you'll learn
+what those details mean and how to check them.</p>
+<h3>By the end, you'll be able to:</h3>
+<ul>
+<li>Recognise the important parts of a bill.</li>
+<li>Understand units, standing charges and VAT.</li>
+<li>Check how the total is calculated.</li>
+<li>Identify when to ask your supplier a question.</li>
+</ul>
 </section>
 
 <section class="card">
-<h2>How learning works</h2>
-<h3>Level 1 · Free</h3>
-<p>Learn the essentials, follow demonstrations and try beginner activities.</p>
-<h3>Level 2 · Paid</h3>
-<p>Build practical skills through guided lessons and simulations. Includes a downloadable keepsake guide with an introduction to Level 3.</p>
-<h3>Level 3 · Paid</h3>
-<p>Develop advanced skills and complete more challenging projects. Includes a keepsake guide recommending related courses.</p>
-<p class="note">Paid lessons and downloads are planned features. Payments are not active.</p>
+<h2>1. Learn the basics</h2>
+<p>An electricity bill usually includes two main
+types of charges.</p>
+
+<div class="grid">
+<div class="info">
+<h3>⚡ Unit rate</h3>
+<p>The price you pay for each kilowatt-hour
+(kWh) of electricity you use.</p>
+<p><strong>Example:</strong> 25p per kWh.</p>
+</div>
+<div class="info">
+<h3>📅 Standing charge</h3>
+<p>A fixed daily charge that may apply even
+when you use very little electricity.</p>
+<p><strong>Example:</strong> 50p per day.</p>
+</div>
+</div>
+
+<div class="info">
+<h3>What is VAT?</h3>
+<p>VAT is a tax. Domestic electricity is generally
+charged at a reduced VAT rate of 5% in the UK.</p>
+</div>
+
+<button onclick="speakLesson()">🔊 Listen to explanation</button>
+<button onclick="stopSpeech()">Stop audio</button>
+<p class="small">Audio uses your device's available speech voice.</p>
 </section>
 
 <section class="card">
-<span class="tag">Free practice</span>
-<h2>Budgeting simulation</h2>
-<p>You're planning your weekly spending. You have £120 available.</p>
-<p id="question"></p>
-<div id="answers"></div>
-<p id="feedback" role="status" aria-live="polite"></p>
-<button id="next" onclick="nextStep()" hidden>Continue</button>
-<p id="progress"></p>
+<h2>2. Explore a sample electricity bill</h2>
+<p>This is a fictional example for learning.
+Tap the highlighted items to understand them.</p>
+
+<div class="bill">
+<div class="billhead">
+<strong>EVERYDAY ENERGY</strong>
+<p>Sample electricity statement</p>
+</div>
+<div class="billbody">
+<p><strong>Billing period:</strong> 1–30 September</p>
+<p><strong>Electricity used:</strong> 200 kWh</p>
+
+<div class="billrow">
+<span>Electricity usage</span><strong>£50.00</strong>
+</div>
+<div class="billrow">
+<span>Standing charge</span><strong>£15.00</strong>
+</div>
+<div class="billrow">
+<span>Subtotal</span><strong>£65.00</strong>
+</div>
+<div class="billrow">
+<span>VAT at 5%</span><strong>£3.25</strong>
+</div>
+<div class="billrow highlight">
+<span><strong>Total charges</strong></span>
+<strong>£68.25</strong>
+</div>
+</div>
+</div>
+
+<h3>Investigate the bill</h3>
+<button onclick="explain('usage')">What is usage?</button>
+<button onclick="explain('standing')">Standing charge?</button>
+<button onclick="explain('vat')">Why VAT?</button>
+<button onclick="explain('total')">How is the total calculated?</button>
+<div id="billInfo" class="info" role="status">
+Select an item to learn more.
+</div>
+</section>
+
+<section class="card gold">
+<span class="tag">INTERACTIVE PRACTICE</span>
+<h2>3. Become a Bill Investigator</h2>
+<p>Use what you've learned to investigate
+realistic situations.</p>
+<div class="progress"><div class="bar" id="bar"></div></div>
+<p id="counter" class="small"></p>
+<h3 id="scenario"></h3>
+<p id="detail"></p>
+<div id="choices"></div>
+<div id="result" class="feedback hidden" role="status"></div>
+<button id="next" class="hidden" onclick="nextQuestion()">Continue</button>
+</section>
+
+<section class="card">
+<h2>Continue your learning</h2>
+<div class="grid">
+<div class="info">
+<span class="tag">LEVEL 1 · FREE</span>
+<h3>Understand the basics</h3>
+<p>Introductory lessons and practice.</p>
+</div>
+<div class="info">
+<span class="tag">LEVEL 2 · PAID</span>
+<h3>Manage household finances</h3>
+<p>Learn bill comparisons, payment methods,
+contracts and more detailed simulations.</p>
+<p>Includes a downloadable reference guide.</p>
+</div>
+<div class="info">
+<span class="tag">LEVEL 3 · PAID</span>
+<h3>Advanced Money Skills</h3>
+<p>Explore more complex financial decisions,
+planning and practical challenges.</p>
+<p>Includes a keepsake guide recommending
+related courses.</p>
+</div>
+</div>
+<p class="small">Paid courses and downloads are planned.
+No payments are active on this page.</p>
 </section>
 </main>
-<footer>Learn. Practise. Earn.</footer>
-<script>
-const subjects=[
-["Money & Finance","Budgeting, banking, bills and consumer rights"],
-["Cooking & Food","Recipes, shopping, nutrition and food safety"],
-["Home & DIY","Tools, repairs, decorating and maintenance"],
-["Health & Wellbeing","Personal care, healthy routines and safety"],
-["Technology","Phones, computers, email and online safety"],
-["Transport & Travel","Journey planning, vehicle care and travel skills"],
-["Family & Relationships","Communication, caring and family routines"],
-["Life Administration","Forms, appointments and everyday paperwork"],
-["Making & Mending","Sewing, crafts, alterations and repairs"],
-["Gardening","Plant care, growing food and sustainability"],
-["Work & Business","Employment, freelancing and entrepreneurship"],
-["Hobbies & Creativity","Photography, music, writing and fashion"]
-];
-document.getElementById("subjects").innerHTML=subjects.map(s=>
-`<article class="card"><h3>${s[0]}</h3><p>${s[1]}</p><span class="tag">Courses being developed</span></article>`
-).join("");
 
-const steps=[
+<footer>
+<p>LEARN & EARN</p>
+<p>Learn. Practise. Earn.</p>
+</footer>
+
+<script>
+const explanations={
+usage:"Usage is measured in kilowatt-hours (kWh). Here, 200 kWh at 25p per kWh costs £50.",
+standing:"The standing charge is 50p per day. Over 30 days, that adds up to £15.",
+vat:"VAT is calculated on the £65 subtotal. Five percent of £65 is £3.25.",
+total:"The usage charge (£50) plus the standing charge (£15) gives £65. Adding VAT (£3.25) produces £68.25."
+};
+function explain(key){
+document.getElementById("billInfo").textContent=explanations[key];
+}
+function speakLesson(){
+stopSpeech();
+if(!("speechSynthesis" in window)){
+alert("Audio is not supported in this browser.");
+return;
+}
+const message=new SpeechSynthesisUtterance(
+"An electricity bill often includes a unit rate, a standing charge and VAT. The unit rate is the price for electricity you use. The standing charge is a daily fee. VAT is a tax added to the charges."
+);
+message.lang="en-GB";
+speechSynthesis.speak(message);
+}
+function stopSpeech(){
+if("speechSynthesis" in window)speechSynthesis.cancel();
+}
+
+const questions=[
 {
-q:"Your food shopping costs £48 and your transport costs £22. How much of your £120 remains?",
-a:["£50","£70","£98"],correct:0,
-why:"£120 minus £48 minus £22 leaves £50."
+title:"The standing charge mystery",
+detail:"A neighbour says they used almost no electricity while away, but their bill still includes a standing charge. Why might this happen?",
+options:[
+"Because a standing charge is usually applied per day",
+"Because the supplier automatically charges for extra appliances",
+"Because electricity use is always estimated"
+],
+answer:0,
+explanation:"A standing charge is generally a fixed daily cost. It can apply even when little electricity is used. This is different from the unit rate, which depends on usage."
 },
 {
-q:"You have £50 left. An essential prescription costs £10, and a cinema ticket costs £15. What should you prioritise?",
-a:["Cinema ticket","Essential prescription","Spend the full £50"],correct:1,
-why:"Pay for essential needs first. You can then decide whether optional spending fits your remaining budget."
+title:"Understanding the meter reading",
+detail:"A bill says the electricity use was estimated rather than based on an actual reading. What would be useful to check?",
+options:[
+"Whether the estimate matches a recent meter reading",
+"Whether the supplier has a different logo",
+"Whether the bill uses blue or black text"
+],
+answer:0,
+explanation:"Estimated readings may differ from actual usage. Checking a recent meter reading can help you identify a discrepancy and ask the supplier to correct it."
 },
 {
-q:"You now have £40 left. An unexpected essential expense of £35 appears. What is the safest immediate choice?",
-a:["Ignore it","Use £35 and keep £5","Borrow £100 automatically"],correct:1,
-why:"If the expense is essential and due now, paying £35 leaves £5. You should also review upcoming costs before making other purchases."
+title:"Comparing two offers",
+detail:"Supplier A has a lower unit rate but a higher standing charge than Supplier B. What information would help you compare the overall cost?",
+options:[
+"Only the unit rate",
+"Your estimated usage and both suppliers' rates and standing charges",
+"Only the standing charge"
+],
+answer:1,
+explanation:"The cheapest option depends on how much electricity you use, the daily standing charges, and other contract terms. Compare estimated total costs over the same period."
+},
+{
+title:"A surprising increase",
+detail:"Your electricity bill is much higher than usual. What should you investigate before assuming the supplier made a mistake?",
+options:[
+"Usage, meter readings, rates and the billing period",
+"Only the total at the bottom",
+"Nothing, because bills always increase"
+],
+answer:0,
+explanation:"A higher bill can result from increased usage, estimated readings, rate changes or a longer billing period. Checking these details helps you identify the cause."
 }
 ];
-let step=0,score=0;
-function showStep(){
-const s=steps[step];
-document.getElementById("question").textContent=s.q;
-document.getElementById("answers").innerHTML="";
-document.getElementById("feedback").textContent="";
-document.getElementById("next").hidden=true;
-document.getElementById("progress").textContent=`Question ${step+1} of ${steps.length}`;
-s.a.forEach((answer,i)=>{
+let current=0;
+let correct=0;
+function renderQuestion(){
+const q=questions[current];
+document.getElementById("counter").textContent=
+"Investigation "+(current+1)+" of "+questions.length;
+document.getElementById("bar").style.width=
+(current/questions.length*100)+"%";
+document.getElementById("scenario").textContent=q.title;
+document.getElementById("detail").textContent=q.detail;
+document.getElementById("result").classList.add("hidden");
+document.getElementById("next").classList.add("hidden");
+const container=document.getElementById("choices");
+container.innerHTML="";
+q.options.forEach((option,index)=>{
 const b=document.createElement("button");
-b.textContent=answer;
-b.onclick=()=>choose(i);
-document.getElementById("answers").appendChild(b);
+b.className="option";
+b.textContent=option;
+b.onclick=()=>answerQuestion(index);
+container.appendChild(b);
 });
 }
-function choose(i){
-const s=steps[step];
-if(i===s.correct)score++;
-document.querySelectorAll("#answers button").forEach(b=>b.disabled=true);
-document.getElementById("feedback").textContent=
-(i===s.correct?"Correct! ":"Not quite. ")+s.why;
-document.getElementById("next").hidden=false;
+function answerQuestion(index){
+const q=questions[current];
+const isCorrect=index===q.answer;
+if(isCorrect)correct++;
+document.querySelectorAll("#choices button")
+.forEach(b=>b.disabled=true);
+const result=document.getElementById("result");
+result.classList.remove("hidden");
+result.textContent=(isCorrect?
+"Good investigation! ":"Let's explore that. ")+q.explanation;
+document.getElementById("next").classList.remove("hidden");
 }
-function nextStep(){
-step++;
-if(step<steps.length){showStep();return;}
-document.getElementById("question").textContent=
-`Completed! You answered ${score} out of ${steps.length} correctly.`;
-document.getElementById("answers").innerHTML="";
-document.getElementById("feedback").textContent=
-"Review the explanations and try again whenever you like.";
-const b=document.getElementById("next");
-b.textContent="Try again";
-b.hidden=false;
-b.onclick=()=>location.reload();
-document.getElementById("progress").textContent="";
+function nextQuestion(){
+current++;
+if(current<questions.length){
+renderQuestion();
+return;
 }
-showStep();
+document.getElementById("bar").style.width="100%";
+document.getElementById("counter").textContent="Completed";
+document.getElementById("scenario").textContent=
+"Investigation complete!";
+document.getElementById("detail").textContent=
+"You answered "+correct+" of "+questions.length+
+" correctly. Review the explanations and practise again whenever you like.";
+document.getElementById("choices").innerHTML="";
+document.getElementById("result").classList.add("hidden");
+const next=document.getElementById("next");
+next.textContent="Try again";
+next.onclick=()=>location.reload();
+}
+renderQuestion();
 </script>
 </body>
 </html>
